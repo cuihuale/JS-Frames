@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片轮播单张示例</title>
+	<script src="jquery-1.7.2.min.js"></script>
+	<style>
+         body{margin:0;padding:0;font-family: "Microsoft Yahei";}
+         ul{margin: 0;padding: 0;}
+         ul li{list-style: none;float:left;}
+         a{text-decoration: none;color:#333;}
+
+         .container{display: block;width: 100%;height:400px;overflow: hidden;position: relative;}
+         .c-img{display: block;width: 100%;height:400px;}
+         .c-img ul li{display: inline-block;width: 100%;height:400px;}
+         .c-img ul li:nth-child(1){background: url(images/1.jpg) center no-repeat;}
+         .c-img ul li:nth-child(2){background: url(images/2.jpg) center no-repeat;}
+         .c-img ul li:nth-child(3){background: url(images/3.jpg) center no-repeat;}
+         .c-img .wrapper{display: block;width: 1200px;height:400px;margin:0 auto;text-align: center;line-height: 400px;color:#fff;font-family: "Microsoft Yahei";font-size: 30px;}
+         .c-dot{display: block;width: 120px;height:30px;position: absolute;bottom: 20px;left:50%;margin-left: -60px;}
+         .c-dot ul{margin-left: -42px;}
+         .c-dot ul li{display: block;width: 10px;height:10px;border:1px solid #000;border-radius: 10px;margin-top: 10px;margin-left:42px; }
+         .c-dot .active{background-color:#fff;border-color:#fff; }
+         .c-click{display: block;width: 1200px;height:47px;position: absolute;top:50%;margin-top: -24px;left:50%;margin-left: -600px;}
+         .c-click a{position: absolute;}
+         .c-click a.toR{right:0;}
+	</style>
+	<script>
+        $(function(){
+          var i = 0;
+          var time = null;
+
+          $('.c-dot ul li').hover(function(){
+            i = $(this).index();
+            $('.c-img ul li').eq(i).fadeIn(800).siblings().fadeOut(200);
+            $(this).addClass('active').siblings().removeClass('active');
+          });
+
+          $('.c-dot ul li,.c-click a').hover(function(){
+                clearInterval(time);
+          },function(){
+                time = setInterval(carousel,3000);
+          });
+
+        function carousel(){
+            i++;
+            if(i>2){
+               i=0;
+            }
+            $('.c-img ul li').eq(i).fadeIn(800).siblings().fadeOut(200);
+            $('.c-dot ul li').eq(i).addClass('active').siblings().removeClass('active');
+         }
+         time = setInterval(carousel,3000);
+       
+        $('.toL').click(function(){
+            i--;
+            if(i<0){
+              i=2;
+            }
+            $('.c-img ul li').eq(i).fadeIn(800).siblings().fadeOut(200);
+            $('.c-dot ul li').eq(i).addClass('active').siblings().removeClass('active');
+        });
+
+        $('.toR').click(function(){
+        	carousel();
+        });
+        });
+         
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="c-img">
+			<ul>
+				<li>
+					<div class="wrapper">
+						<p>aaaaaaaaaaaaaa</p>
+					</div>
+				</li>
+				<li>
+					<div class="wrapper">
+						<p>bbbbbbbbbbbbbbb</p>
+					</div>
+				</li>
+				<li>
+					<div class="wrapper">
+						<p>cccccccccccccc</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="c-dot">
+			<ul>
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="c-click">
+			<a href="javascript:void(0);" class="toL"><img src="images/left.png" alt="向左"></a>
+			<a href="javascript:void(0);" class="toR"><img src="images/right.png" alt="向右"></a>
+		</div>
+	</div>
+</body>
+</html>
