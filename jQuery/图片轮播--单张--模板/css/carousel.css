@@ -1,0 +1,17 @@
+html,body,ul,li,p,q,h1,a,span,img{margin:0;padding:0;list-style-type:none; font-family:"Î¢ÈíÑÅºÚ"; text-decoration:none;}/*È¥µô±ß¾à*/
+*{margin:0 auto; padding:0;}
+img{border: none;}
+a{outline: none;}
+#img{width:100%; height:580px; /*position:relative;*/position: absolute;}
+.img{width:100%; height:580px; overflow:hidden;}
+.img ul li{width:100%; height:580px;}
+.img ul li .clix{width: 1200px;height: 100%;}
+.img ul li .clix p{position: relative;top:240px;margin-left: 180px;font-size: 30px;color:#0062ad;}
+.dianji{width:120px; height:30px;position:absolute; left:50%; margin-left:-60px; bottom:10px;top:520px;}
+.dianji ul li{width:10px; height:10px; border:1px solid #FFF;float:left; margin-right:10px; border-radius:15px; margin-top:0px;}
+.dianji ul{margin-left:20px;}
+.dianji ul .bj{background:#FFF}
+
+#img .click{width: 1200px;height:47px;position: absolute; top: 50%; margin-top: -24px;left:50%;margin-left: -600px;}
+#img .click a{display:block; position:absolute;}
+#img .click a.right{right: 0}
