@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项卡示例</title>
+	<script type="text/javascript" src="jquery.1.11.1.js"></script>
+	<style>
+       body{margin:0;padding: 0;background: #e5e5e5;}
+       ul{padding:0;}
+       ul li{list-style: none;float:left;}
+       a{text-decoration: none;color:#fff;}
+       .container{display: block;width: 1000px;height:500px;background-color: #fff;border-radius: 10px;margin: 40px auto;padding: 0;}
+       .container .tabs{display: block;width: 100%;height:100px;background-color: #0062ad;border-top-left-radius: 10px;border-top-right-radius: 10px;}
+        .container .tabs ul li{width:25%;}
+       .container .tabs li a{display:block;width:100%;height:100px;font-size: 24px;margin:0;padding: 0;text-align: center;line-height: 100px;}
+       .container .tabs .active{background-color: #fff;color:#0062ad;border-top-right-radius: 10px;border-top-left-radius: 10px;}
+       .container .tab{display:block;width: 960px;height:360px;padding:20px;}
+	</style>
+	<script>
+	    //Javascript语法
+         window.onload=function(){
+         	var tabs=document.getElementById('tabs');
+         	var tabsA=tabs.getElementsByTagName('a');
+         	var tab=document.getElementsByName('tab');
+
+         	for(var i=0;i<tabsA.length;i++){
+                  tabsA[i].index=i;
+                  tabsA[i].onclick=function(){
+                  	for(var i=0;i<tabsA.length;i++){
+                       tabsA[i].className="";
+                       tab[i].style.display="none";
+                  	}
+                  	this.className="active";
+                  	tab[this.index].style.display="block";
+                  }
+         	}
+         }
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="tabs" id="tabs">
+			<ul>
+				<li><a href="javascript:void(0);" class="active">习近平谈党章党规 </a></li>
+				<li><a href="javascript:void(0);">中晋资产“出事” </a></li>
+				<li><a href="javascript:void(0);">鞍钢巨亏近46亿</a></li>
+				<li><a href="javascript:void(0);">iPhone 4s 手机？</a></li>
+			</ul>
+		</div>
+		<div name="tab"  class="tab">
+			<p>　保持坚强政治定力，坚持全面从严治党、依规治党，聚焦监督执纪问责，深化标本兼治，创新体制机制，健全法规制度，强化党内监督，把纪律挺在前面，持之以恒落实中央八项规定精神，着力解决群众身边的不正之风和腐败问题，坚决遏制腐败蔓延势头，不断取得党风廉政建设和反腐败斗争新成效。</p>
+		</div>
+		<div name="tab" class="tab" style="display:none;">
+			<p>从E租宝、鑫琦资产，再到金鹿财行、中晋资产，沪上P2P行业已风声鹤唳，种种迹象表明，在监管加强、合规审查，以及P2P退潮的环境下，P2P行业已进入“崩盘”高危季。</p>
+		</div>
+		<div name="tab" class="tab" style="display:none;">
+			<p>　　面对巨额亏损，鞍钢股份称，“国内外钢铁行业进入了挑战最为严峻、竞争最为惨烈、生存最为艰难的‘冰河期’。”目前鞍钢不少老旧的生产线已经关闭，为了降低成本以对抗“钢铁行业冰冻期”，鞍钢正在大力改革增效，该措施能否将公司拖出亏损泥潭值得关注。</p>
+		</div>
+		<div name="tab" class="tab" style="display:none;">
+			<p>虽然苹果已经发布了功能强大的 iPhone 6s，即便是最新发布的4寸屏幕 iPhone SE ，它的硬件规格相比 iPhone 4s 也要高得多，但是，并非所有人都喜欢追赶潮流，对于他们而言，够用就好，如果只是接打电话、发发微信、刷刷朋友圈，iPhone 4s 还是够用的。</p>
+		</div>
+	</div>
+</body>
+</html>
