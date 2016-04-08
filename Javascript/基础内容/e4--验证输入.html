@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>验证输入</title>
+	<script>
+        function myS(){
+        	x= document.getElementById('de').value;
+        	if(x =="" || isNaN(x)){
+               alert("输入的不是数字");
+        	}
+        }
+	</script>
+</head>
+<body>
+	<p>在输入框中输入内容：</p>
+	<input type="text" id="de">
+	<button type="button" onclick="myS()">点击</button>
+</body>
+</html>
