@@ -1,0 +1,63 @@
+1、外部的 JavaScript：  <script src="myScript.js"></script>   	外部脚本不能包含 <script> 标签。
+
+2、JavaScript 没有任何打印或者输出的函数。
+
+   JavaScript 可以通过不同的方式来输出数据：
+
+    使用 window.alert() 弹出警告框。
+    使用 document.write() 方法将内容写到 HTML 文档中。
+    使用 innerHTML 写入到 HTML 元素。
+    使用 console.log() 写入到浏览器的控制台。
+
+3、变量通常是可变的。字面量是一个恒定的值（“字符”，数字，数组，对象等）。 、
+
+4、语句分隔：“;”
+
+5、JavaScript 关键字（var等）必须以字母、下划线（_）或美元符（$）开始。 
+
+6、注释： //     多行注释以 /* 开始，以 */ 结尾。 
+
+7、区分大小写， 	JavaScript 语句和 JavaScript 变量都对大小写敏感。 
+
+8、JavaScript 中，常见的是驼峰法的命名规则，如 lastName (而不是lastname)。
+
+9、您可以在文本字符串中使用反斜杠对代码行进行换行。document.write("你好 \
+世界!");
+
+10、可以在一条语句中声明很多变量。该语句以 var 开头，并使用逗号分隔变量即可。
+
+11、数据类型：字符串（String）、数字(Number)、布尔(Boolean)、数组(Array)、对象(Object)、空（Null）、未定义（Undefined）。
+
+12、JavaScript 数组：var cars=new Array("Saab","Volvo","BMW");
+
+13、Undefined 这个值表示变量不含有值。 可以通过将变量的值设置为 null 来清空变量。
+
+14、当您声明新变量时，可以使用关键词 "new" 来声明其类型：
+
+    var carname=new String;
+    var x=      new Number;
+    var y=      new Boolean;
+    var cars=   new Array;
+    var person= new Object;
+
+15、对象属性：键值对通常写法为 name : value (键与值以冒号分割)。 （对象：属性  方法）
+
+    访问对象属性：person.lastName;  或person["lastName"]; 
+
+16、局部 JavaScript 变量：您可以在不同的函数中使用名称相同的局部变量，因为只有声明过该变量的函数才能识别出该变量。
+
+                          只能在函数内部访问它。（该变量的作用域是局部的）。
+
+17、在函数外声明的变量是全局变量，网页上的所有脚本和函数都能访问它。
+
+18、JavaScript 变量的生存期：
+
+    JavaScript 变量的生命期从它们被声明的时间开始。
+
+    局部变量会在函数运行以后被删除。
+
+    全局变量会在页面关闭后被删除。
+
+19、如果您把值赋给尚未声明的变量，该变量将被自动作为全局变量声明。 carname="Volvo";
+
+20、在 JavaScript 中, 作用域为可访问变量，对象，函数的集合。

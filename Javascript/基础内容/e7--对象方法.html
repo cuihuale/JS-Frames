@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>对象方法的创建与访问</title>
+</head>
+<body>
+	<p>创建和使用对象方法</p>
+	<p>对象方法作为一个函数定义存储在对象属性中。</p>
+	<p id="de"></p>
+	<script>
+        var person = {
+        	firstName : 'John',
+        	lastName : 'Doe',
+        	id : 5566,
+        	fullName :function(){
+        		return this.firstName + '' +this.lastName;
+        	}
+        }
+        document.getElementById('de').innerHTML = personal.fullName();
+        //如果你要访问 person 对象的 fullName 属性，它将作为一个定义函数的字符串返回 
+        //document.getElementById('de').innerHTML = personal.fullName;
+	</script>
+</body>
+</html>
