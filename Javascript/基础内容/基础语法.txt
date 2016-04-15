@@ -136,5 +136,54 @@ valueOf() 	返回某个字符串对象的原始值
     null 的数据类型是 object
     未定义变量的数据类型为 undefined
 
+32、Javascript类型转换：   
+
+                       通过JS函数转换
+
+                       通过JS自身自动转换
+
+     数字转换为字符串：
+
+                     全局方法String( ),该方法可用于任何类型的数字，字母，变量，表达式
+
+                     Number 方法 toString() 也是有同样的效果: (100+23).toString()
+
+                                toExponential() 	把对象的值转换为指数计数法。
+                                toFixed() 	把数字转换为字符串，结果的小数点后有指定位数的数字。
+                                toPrecision() 	把数字格式化为指定的长度。
+
+     布尔值转换为字符串：  String( true | false)  或   false.toString()   true.toString()
+
+     日期转换为字符串：   String(Date())   或 Date().toString()
+
+                      getDate() 	从 Date 对象返回一个月中的某一天 (1 ~ 31)。
+getDay() 	从 Date 对象返回一周中的某一天 (0 ~ 6)。
+getFullYear() 	从 Date 对象以四位数字返回年份。
+getHours() 	返回 Date 对象的小时 (0 ~ 23)。
+getMilliseconds() 	返回 Date 对象的毫秒(0 ~ 999)。
+getMinutes() 	返回 Date 对象的分钟 (0 ~ 59)。
+getMonth() 	从 Date 对象返回月份 (0 ~ 11)。
+getSeconds() 	返回 Date 对象的秒数 (0 ~ 59)。
+getTime() 	返回 1970 年 1 月 1 日至今的毫秒数。
+
+      字符串转换为数字：  Number()   例： Number("3.14")-----3.14  Number("99 88")---NaN
+
+            parseFloat() 	解析一个字符串，并返回一个浮点数。
+            parseInt() 	解析一个字符串，并返回一个整数。   
+
+      一元运算符 + ：可将变量转为数字 
+
+      日期转换为数字：  d = new Date();  Number(d);或 d.getTime();
+
+      自动转换类型：  5 + null ------------ 5
+
+                      "5" + 1 ----------- "51"
+
+                     "5" -1 ------------4
+      
+      自动转换为字符串：
+
+                   当你尝试输出一个对象或一个变量时 JavaScript 会自动调用变量的 toString() 方法
+           
 
 
